@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad Educativa Luis Mario Careaga | Inscripciones Abiertas</title>
-    <style></style>
+    <title>Unidad Educativa Epsilon Nu</title>
+    <style>
+        body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 3fr 1fr; /* Columna principal y barra lateral */
+        gap: 10px;
+        }
+        header, nav, footer {
+        grid-column: 1 / span 2;
+        }
+        /* Header, Nav y Footer ocupan todo el ancho de lado a lado */
+        header, nav, footer {
+        grid-column: 1 / span 2;
+        }
+
+        /* El contenido principal se queda a la izquierda */
+        main {
+        grid-column: 1;
+        }
+
+        /* La barra lateral se queda a la derecha */
+        aside {
+        grid-column: 2;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo_lmc2.jpg" alt="Logo Unidad Educativa" width="100" height="auto">
+            <img src="images/logo.png" alt="Logo Unidad Educativa" width="100" height="auto">
         </div>
     </header>
 
@@ -23,8 +47,9 @@
 
     <main>
         <section id="inicio">
-            <h1>Unidad Escolar Luis Mario Careaga</h1>
-            <p>Inscripciones abiertas para la gestión escolar 2027. Cupos limitados.</p>
+            <h1>Unidad Escolar Epsilon Nu</h1>
+            <p>Gestión escolar 2027. Cupos limitados.</p><br>
+            Inscipciones Abiertas <br>
             <!-- llamada para formulario de contacto -->
             <a href="#contacto"><button>Solicitar Información</button></a>
         </section>
@@ -42,7 +67,7 @@
 
         <section id="contacto">
             <h2>Formulario de Pre-Inscripción</h2>
-            <p>Déjanos tus datos y un asesor se pondrá en contacto contigo a la brevedad.</p>
+            <p>Déjanos tus datos y un asesor se pondrá en contacto contigo.</p>
             
             <form action="#" method="POST">
                 <label for="nombre">Nombre del Padre o Tutor:</label><br>
@@ -64,9 +89,16 @@
         </section>
     </main>
 
+    <aside>
+        <h3>Datos del desarrollador (aside)</h3>
+        <p>donGato estudiante de sistemas</p>
+    </aside>
+
+    
+
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>&copy; 2026 Unidad Educativa Luis Mario Careaga 2 (Secundaria). Todos los derechos reservados.</p>
+        <p>&copy; 2026 Unidad Educativa Epsilon Nu (Secundaria). Todos los derechos reservados.</p>
         <p>Dirección: calle 7 s/n | Teléfono: +591 724725</p>
     </footer>
 
