@@ -1,0 +1,62 @@
+      /* damos forma a la pagina */
+        body {
+            margin: 0;
+            
+            display: grid;
+            grid-template-columns: 1fr; /* version celulares  */
+            gap: 12px;
+        }
+
+        header, nav, footer {
+            grid-column: 1 / 3; 
+        }
+
+        /* El contenido principal se queda a la izquierda */
+        main {
+            grid-column: 1;
+        }
+
+        /* La barra lateral se queda a la derecha */
+        aside {
+            grid-column: 2;
+        }
+
+        /* maquillamos la pagina  */
+        header, nav, main, aside,footer {
+            background-color: rgb(236, 234, 199);padding: 20px; /*margen interno  */
+            font-family: serif;
+            size: 12;
+            
+        }
+        /* declaramos las dimensiones  */
+        header { min-height: 80px; }
+        nav    { min-height: 50px; }
+        main   { min-height: 400px; } 
+        aside  { min-height: 400px; } 
+        footer { min-height: 60px; }
+
+        ul{
+            display: flex;
+            gap: 25px;
+        }
+
+
+
+
+
+
+
+        /* version web  */
+        @media (min-width: 768px) {
+            body {
+                grid-template-columns: 3fr 1fr; /* Activa las dos columnas solo en pantallas grandes */
+            }
+
+            /* Como ahora hay dos columnas, volvemos a posicionar main y aside de lado a lado */
+            main {
+                grid-column: 1;
+            }
+            aside {
+                grid-column: 2;
+            }
+        }
