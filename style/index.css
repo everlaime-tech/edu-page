@@ -3,8 +3,8 @@
             margin: 0;
             
             display: grid;
-            grid-template-columns: 1fr; /* version celulares  */
-            gap: 12px;
+            grid-template-columns: 3fr 1fr; /* version celulares  */
+            gap: 5px;
         }
 
         header, nav, footer {
@@ -16,47 +16,84 @@
             grid-column: 1;
         }
 
-        /* La barra lateral se queda a la derecha */
         aside {
             grid-column: 2;
+            margin: 0px;
+            background-color: rgb(219, 230, 226);
+            padding: 0 20px;
         }
-
         /* maquillamos la pagina  */
-        header, nav, main, aside,footer {
-            background-color: rgb(236, 234, 199);padding: 20px; /*margen interno  */
+        header, nav, main,footer {
+            background-color: rgb(236, 234, 199); 
             font-family: serif;
             size: 12;
             
         }
         /* declaramos las dimensiones  */
         header { min-height: 80px; }
-        nav    { min-height: 50px; }
-        main   { min-height: 400px; } 
-        aside  { min-height: 400px; } 
+        /* nav    { min-height: 50px; } */
+        /* main   { min-height: 400px; } 
+        aside  { min-height: 400px; }  */
         footer { min-height: 60px; }
 
-        ul{
+        /* maquillaje por partes */
+        nav ul{
+            background-color: #c6d6eb;
             display: flex;
-            gap: 25px;
+            list-style: none;
+            gap: 200px; 
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: block;            /* Hace que todo el cuadro sea clickeable */
+            text-decoration: none;     /* Quita la línea subrayada del texto */
+            padding: 8px 12px;        /* Espacio inflable dentro de cada botón */
+            font-family: sans-serif;   /* Letra limpia sin adornos */
+            font-weight: bold;  
         }
 
+        main {
+            padding: 0 80px;   
+            font-family: sans-serif;  
+            color: #041229;
+        }
 
-
-
-
-
-
-        /* version web  */
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
+    
+            /* 1. El cuerpo pasa a tener una sola columna vertical */
             body {
-                grid-template-columns: 3fr 1fr; /* Activa las dos columnas solo en pantallas grandes */
+                grid-template-columns: 1fr;
+                gap: 15px; /* Separación estándar entre tarjetas apiladas */
             }
 
-            /* Como ahora hay dos columnas, volvemos a posicionar main y aside de lado a lado */
-            main {
+            header, nav, main, aside, footer {
                 grid-column: 1;
             }
-            aside {
-                grid-column: 2;
+
+            
+            nav ul {
+                flex-direction: column; /* Pone los botones uno debajo de otro */
+                gap: 5px;              /* Reduce tu gap de 200px a solo 5px para celular */
+                padding: 10px 0;       /* Espacio arriba y abajo del menú móvil */
+            }
+
+            nav ul li {
+                text-align: center;    /* Centra el texto de cada botón */
+                width: 100%;           /* Hace que todo el ancho sea clickeable con el dedo */
+            }
+            
+            main {
+                padding: 0 15px;       /* Bajamos tu padding de 80px a 15px para ganar pantalla */
+            }
+
+            /* TARJETAS APILADAS Y PADDING MÓVIL */
+            section {
+                background-color: white; /* Resalta como tarjeta individual */
+                padding: 20px;          /* Padding móvil: cómodo pero sin desperdiciar espacio */
+                margin-bottom: 15px;    /* Separa una tarjeta de la otra al apilarse */
+                border-radius: 8px;     /* Bordes redondeados para la tarjeta */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave móvil */
             }
         }
