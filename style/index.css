@@ -60,6 +60,47 @@
             color: #041229;
         }
 
+        .boton-modo{
+            margin-top: 14px
+            background-color:orange;
+            color:blank;
+            border:none;
+            font-family:Arial;
+
+        }
+
+        body.claro{
+            background-color: azure;
+            color: #041229;
+        }
+        body.claro header{
+            background-color: aquamarine;
+            color:black;
+
+        }
+        body.claro header p{
+            color:aqua;
+        }
+        body.claro nav {
+            background-color: aliceblue;
+        }
+        body.claro .tarjeta{
+            background-color: blanchedalmond;
+        }
+        body.claro .tarjeta h2{
+            color :black;
+        }
+        body.claro article{
+            background-color: #c6d6eb;
+        }
+        body.claro article h3{
+            background-color: #c6d6eb;
+        }
+
+        body.claro from label{
+            
+        }
+
         @media (max-width: 768px) {
     
             /* 1. El cuerpo pasa a tener una sola columna vertical */
