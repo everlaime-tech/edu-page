@@ -10,7 +10,7 @@ function alternarModo()
     if (esDeDia) {
         botonModo.textContent="Modo noche"
     } else {
-        botonModo.textContent="Modo noche"
+        botonModo.textContent="Modo dia"
     }
 }
 botonModo.addEventListener("click", alternarModo);
