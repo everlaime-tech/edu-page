@@ -220,7 +220,7 @@
             color: white;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
     
             /* 1. El cuerpo pasa a tener una sola columna vertical */
             body {
