@@ -1,6 +1,6 @@
 .oculto { display: none; }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,4 +44,11 @@ input, textarea {
     padding: 0.5rem;
     border: 1px solid #BCAAA4;
     border-radius: 6px;
+}
+
+#mensaje {
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    display: block;  
 }
