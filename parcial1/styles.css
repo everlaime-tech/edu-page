@@ -1,0 +1,47 @@
+.oculto { display: none; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  
+body {
+    background-color: #FFF8E1;         
+    color: #3E2723;               
+    font-family:  Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;                 
+    padding: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #6D4C41;              
+    font-weight: bold;
+    
+}
+
+
+section {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+   
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #BCAAA4;
+    border-radius: 6px;
+}
