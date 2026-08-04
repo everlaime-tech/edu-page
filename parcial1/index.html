@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Café El Trigal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>nombre del negocio</h1>
+    <header id="inicio">
+        <h1>Café El Trigal</h1>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#servicios">Productos/Servicios</a>
+            <a href="#cafe">Productos/Servicios</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2></h2> 
-            <p>parrafo corto</p>
+        <section id="cafe">
+            <h2>Nuestro café</h2> 
+            <p>Somos un emprendimiento joven hecho compuesto por familias tradicionales de la region para traerles el mejor cafe de Bolivia extraido de las diferentes regiones para su deleite. Nos encontramos ubicados en la calle central entre c1 y c7 en pleno centro de la ciudad lado plazuela de las americas edificio mirade las flores tercer piso</p>
             <ul>
-                <li>item 1 precio Bs 10 </li>
-                <li>item 2 precio Bs 20 </li>
-                <li>item 3 precio Bs 30 </li>
+                <li>Café americano - Bs 12 </li>
+                <li>Capuchino - Bs 18 </li>
+                <li>Submarino - Bs 15 </li>
             </ul>
         </section>
-        <section>
-            <h2></h2> 
+        <section id="contacto">
+            <h2>Haz tu pedido</h2> 
             <form action="">
-                <label for="c1"></label>
-                <input type="text" id="c1" name="c1">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                <label for="c2"></label>
-                <input type="text" id="c2" name="c2">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
 
-                <label for="c3"></label>
-                <input type="text" id="c3" name="c3">
+                <!-- <label for="c3"></label>
+                <input type="text" id="c3" name="c3"> -->
+
+                <label for="pedido">Tu pedido</label>
+                <textarea name="" id="pedido" name="pedido" rows="4"></textarea>
             </form>
             <button type="submit">Boton Enviar</button>
             <p></p>
