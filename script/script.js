@@ -14,3 +14,32 @@ function alternarModo()
     }
 }
 botonModo.addEventListener("click", alternarModo);
+
+
+
+//====================================================
+//validacion
+const formularioPreinscripcion = document.querySelector("#form-preinscripcion");
+const aviso = document.querySelector("#error-mensaje");
+
+function revisarPreinscripcion (event){
+    event.preventDefault();
+
+    const nombre=document.querySelector("#nombre").value;
+    const correo=document.querySelector("#correo").value;
+    if(nombre===""){
+        aviso.textContent = "Llena el campo de nombres y apellidos";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    } else if (correo.includes("@") === false){
+       aviso.textContent = "Llena correctamente el correo electronico";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+
+    } else {
+        aviso.textContent= "Registro exitoso";
+        aviso.classList.add("exito");
+        aviso.classList.remove("error");
+    }
+}
+formularioPreinscripcion.addEventListener("submit", revisarPreinscripcion);
