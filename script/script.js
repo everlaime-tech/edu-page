@@ -27,6 +27,9 @@ function revisarPreinscripcion (event){
 
     const nombre=document.querySelector("#nombre").value;
     const correo=document.querySelector("#correo").value;
+    const telefono = document.querySelector("#telefono").value;
+    const nivel_interes = document.querySelector("#nivel_interes").value;
+
     if(nombre===""){
         aviso.textContent = "Llena el campo de nombres y apellidos";
         aviso.classList.add("error");
@@ -36,6 +39,15 @@ function revisarPreinscripcion (event){
         aviso.classList.add("error");
         aviso.classList.remove("exito");
 
+    } else if (telefono==="" || isNaN(telefono))   {
+        aviso.textContent="Es necesario su numero de contacto para comunicarnos con usted";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    
+    } else if(nivel_interes===""){
+        aviso.textContent="Debe seleccionar un nivel educativo"
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
     } else {
         aviso.textContent= "Registro exitoso";
         aviso.classList.add("exito");

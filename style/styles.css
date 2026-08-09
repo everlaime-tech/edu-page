@@ -115,19 +115,30 @@
         #contacto form{
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
         #contacto form input{
             padding: 8px;
-           width: 97%;
+           width: 98%;
+           
+        }
+        #contacto form select{
+            width: 100%;
+            padding: 10px;
+            
+        }
+        #contacto form textarea{
+            width: 98%;
+            padding: 8px;        
         }
         #contacto form button[type="submit"] {
-            background-color: #4c68b3;      /* oscuro */
+            background-color: #090d3d;      /* oscuro */
+            font-size: large;
             color: white;
             padding: 10px 20px;
-            font-weight: bold;
-            width: fit-content;
-            margin: 0 auto;
+            font-weight: bolder;
+            /* width: 200px; */
+            margin: 1 auto;
         }
         /* el footer */
 
@@ -151,7 +162,8 @@
             margin-top: 14px;
             background-color: #2c3e50;      /* oscuro */
             color: #e0e0e0;                 /* claro */
-            border: none;
+            /* border: none; */
+             border-radius: 10rem;
             display: flex;
         }
 
@@ -198,17 +210,18 @@
         }
 
         body.claro footer {
-            background-color: #2c3e50;      /* Puedes dejar el footer oscuro o cambiarlo */
+            background-color: #2c3e50;      /* mi footer oscuro o otro */
             color: white;
         }
 
         body.claro .boton-modo {
-            background-color: #e0e0e0;
-            color: #1a1a2e;
+            background-color: #634e4e;
+            color: #fcfcfc;
+            border-radius: 10rem;
         }
 
         body.claro #contacto form button[type="submit"] {
-            background-color: #4c68b3;
+            background-color: #2a3e74;
             color: white;
         }
 
@@ -245,7 +258,7 @@
             }
             
             main {
-                padding: 0 15px;       /* Bajamos tu padding de 80px a 15px para ganar pantalla */
+                padding: 0 15px;       /* Bajamos el padding de 80px a 15px para ganar pantalla */
             }
 
             /* TARJETAS APILADAS Y PADDING MÓVIL */
@@ -253,7 +266,7 @@
                 background-color: white; /* Resalta como tarjeta individual */
                 padding: 20px;          /* Padding móvil: cómodo pero sin desperdiciar espacio */
                 margin-bottom: 15px;    /* Separa una tarjeta de la otra al apilarse */
-                border-radius: 8px;     /* Bordes redondeados para la tarjeta */
+                border-radius: 8px;    
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave móvil */
             }
         }
@@ -275,9 +288,9 @@
 
         .aviso.error {
         display: block !important;
-        background-color: #3a1414;
-        color: #ffb4b4;
-        border-left: 4px solid #e05555;
+        background-color: #551b1b;
+        color: #f3f8c9;
+        border-left: 4px solid #c70303;
         }
 
         .aviso.exito {
