@@ -1,0 +1,348 @@
+/* damos forma a la pagina */
+        body {
+
+            background-color: #1a1a2e;      /* Fondo general oscuro */
+            color: #e0e0e0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* version celulares  */
+            gap: 5px;
+        }
+
+        header, nav, footer {
+            grid-column: 1 / 3;
+            background-color: #16213e;
+            color: #e0e0e0;
+        }
+
+        /* El contenido principal se queda a la izquierda */
+        main {
+            grid-column: 1;
+            background-color: #16213e;
+            color: #e0e0e0;
+        }
+
+        aside {
+            grid-column: 2;
+            margin: 0px;
+            background-color: #1a1a2e;      /* oscuro */
+            padding: 0 20px;
+            color: #e0e0e0;                 /* texto claro */
+        }
+        /* maquillamos la pagina  */
+        header, nav, main,footer {
+            /* background-color: rgb(255, 253, 248);  */
+
+            size: 14;
+
+        }
+        /* declaramos las dimensiones  */
+        header { min-height: 60px; }
+        /*nav    { min-height: 50px; } */
+        /* main   { min-height: 400px; }
+        aside  { min-height: 400px; }  */
+        footer { min-height: 60px; }
+
+        /* maquillaje por partes */
+        nav ul{
+            background-color: #4c68b3;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            /* gap: 200px;  */
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 80px;
+        }
+        nav ul li {
+            display: block;            /* Hace que todo el cuadro sea clickeable */
+            text-decoration: none;     /* Quita la línea subrayada del texto */
+            padding: 8px 12px;        /* Espacio inflable dentro de cada botón */
+
+            font-weight: bold;
+
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+        }
+
+        main {
+            padding: 0 80px;
+
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+        }
+        nav{
+            flex: 1;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* las secciones del main*/
+        main section {
+            background-color: #0f3460;      /* oscuro */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 50px;
+            color: #e0e0e0;                 /* texto claro */
+        }
+
+        main section p{
+            text-align: center;
+            font-size: x-large;
+
+        }
+
+        #contacto form{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        #contacto form input{
+            padding: 8px;
+           width: 98%;
+
+        }
+        #contacto form select{
+            width: 100%;
+            padding: 10px;
+
+        }
+        #contacto form textarea{
+            width: 98%;
+            padding: 8px;
+        }
+        #contacto form button[type="submit"] {
+            background-color: #090d3d;      /* oscuro */
+            font-size: large;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bolder;
+            /* width: 200px; */
+            margin: 1 auto;
+        }
+        /* el footer */
+
+        footer{
+            background-color: #0f3460;      /* oscuro */
+            /* padding: 0 0 0 0; */
+            color: white;
+            border-top: 3px solid #4c68b3;
+        }
+
+
+
+
+
+
+
+
+/* modo nocturno */
+        .divbtn-modo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+        }
+
+        .boton-modo{
+            margin-top: 14px;
+            background-color: #2c3e50;      /* oscuro */
+            color: #e0e0e0;                 /* claro */
+            /* border: none; */
+             border-radius: 10rem;
+            display: flex;
+        }
+
+        body.claro{
+            background-color: #f5f5f5;
+            color: #1a1a2e;
+        }
+        body.claro header{
+            background-color: #ffffff;
+            color: #1a1a2e;
+
+        }
+        body.claro header p{
+            color: #1a1a2e;
+        }
+        body.claro nav {
+            background-color: #ffffff;
+        }
+        body.claro .tarjeta{
+            background-color: #f0f0f0;
+        }
+        body.claro .tarjeta h2{
+            color : #1a1a2e;
+        }
+        body.claro article{
+            background-color: #f0f0f0;
+        }
+        body.claro article h3{
+            background-color: #f0f0f0;
+            color: #1a1a2e;
+        }
+
+        body.claro form label{
+            color: #1a1a2e;
+        }
+
+        body.claro main section {
+            background-color: #f0f0f0;      /* Fondo gris claro para tarjetas */
+            color: #1a1a2e;
+        }
+        body.claro aside {
+            background-color: #e8e8e8;      /* Fondo claro para el aside */
+            color: #1a1a2e;
+        }
+
+        body.claro footer {
+            background-color: #2c3e50;      /* mi footer oscuro o otro */
+            color: white;
+        }
+
+        body.claro .boton-modo {
+            background-color: #634e4e;
+            color: #fcfcfc;
+            border-radius: 10rem;
+        }
+
+        body.claro #contacto form button[type="submit"] {
+            background-color: #2a3e74;
+            color: white;
+        }
+
+        body.claro nav ul {
+            background-color: #4c68b3;
+        }
+
+        body.claro nav ul li a {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            /* 1. El cuerpo pasa a tener una sola columna vertical */
+            body {
+                grid-template-columns: 1fr;
+                gap: 15px; /* Separación estándar entre tarjetas apiladas */
+            }
+
+            header, nav, main, aside, footer {
+                grid-column: 1;
+            }
+
+
+            nav ul {
+                flex-direction: column; /* Pone los botones uno debajo de otro */
+                gap: 5px;              /* Reduce tu gap de 200px a solo 5px para celular */
+                padding: 10px 0;       /* Espacio arriba y abajo del menú móvil */
+            }
+
+            nav ul li {
+                text-align: center;    /* Centra el texto de cada botón */
+                width: 100%;           /* Hace que todo el ancho sea clickeable con el dedo */
+            }
+
+            main {
+                padding: 0 15px;       /* Bajamos el padding de 80px a 15px para ganar pantalla */
+            }
+
+            /* TARJETAS APILADAS Y PADDING MÓVIL */
+            section {
+                background-color: white; /* Resalta como tarjeta individual */
+                padding: 20px;          /* Padding móvil: cómodo pero sin desperdiciar espacio */
+                margin-bottom: 15px;    /* Separa una tarjeta de la otra al apilarse */
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave móvil */
+            }
+        }
+
+
+
+         /* logotipo */
+         .logo img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+         }
+        #inicio img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 30px;
+         }
+
+        #nosotros p{
+            font-size: 14px;
+            text-align: justify;
+        }
+        footer{
+            padding: 20px;
+        }
+
+
+/* publicaciones */
+    .publicacion {
+        background-color: #2a2a4a;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        color: #e0e0e0;
+    }
+    .publicacion h4 {
+        margin: 0 0 5px 0;
+        color: #ff9000;
+    }
+    .publicacion p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    .publicacion small {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        color: #aaa;
+    }
+
+
+
+
+
+
+
+        .aviso {
+        display: none;
+        margin-top: 14px;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-weight: bold;
+        }
+
+        .aviso.error {
+        display: block !important;
+        background-color: #551b1b;
+        color: #f3f8c9;
+        border-left: 4px solid #c70303;
+        }
+
+        .aviso.exito {
+        display: block;
+        background-color: #14301b;
+        color: #b7f0c4;
+        border-left: 4px solid #3fbf6a;
+        }
