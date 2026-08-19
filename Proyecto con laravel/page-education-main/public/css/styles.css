@@ -318,7 +318,105 @@
         font-size: 12px;
         color: #aaa;
     }
+    .h3-publicaciones {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
 
+/* login */
+#login {
+    max-width: 500px;
+    margin: 0 auto;
+
+    padding: 30px;
+    border-radius: 12px;
+}
+#login input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+#login button {
+    width: 100%;
+}
+
+
+
+
+
+/* el crud de publicaciones */
+/* ===== LISTADO DE PUBLICACIONES (index) ===== */
+.card {
+    background: #1e2e4a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff9000;
+}
+
+.card h4 {
+    margin: 0 0 5px 0;
+    color: #ff9000;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.card small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.card .acciones {
+    margin-top: 10px;
+}
+
+/* Modo claro */
+body.claro .card {
+    background: #f5f5f5;
+    border-left-color: #ff9000;
+}
+
+body.claro .card small {
+    color: #666;
+}
+/* ===== CRUD PUBLICACIONES (básico) ===== */
+.panel-container label {
+    display: block;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.panel-container input,
+.panel-container textarea,
+.panel-container select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #2a4a6a;
+    border-radius: 4px;
+    background: #1a2a4a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+body.claro .panel-container label {
+    color: #1a1a2e;
+}
+
+body.claro .panel-container input,
+body.claro .panel-container textarea,
+body.claro .panel-container select {
+    background: #fff;
+    border-color: #ccc;
+    color: #1a1a2e;
+}
 
 
 
