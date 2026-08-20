@@ -6,7 +6,7 @@
 <div class="panel-container">
     <h1>Editar Publicación</h1>
 
-    <form action="{{ route('publicaciones.update', $publicacion) }}" method="POST">
+    <form action="{{ route('publicaciones.update',  ['publicacion' => $publicacion->id]) }}" method="POST">
         @csrf @method('PUT')
 
         <label for="titulo">Título:</label>

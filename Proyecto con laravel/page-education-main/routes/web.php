@@ -11,41 +11,42 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Landing - Inicio
-Route::get('/', function () {
-    $publicaciones = Publicacion::where('activa', true)
+
+function verPublicaciones()
+{
+    return Publicacion::where('activa', true)
         ->orderBy('fecha_publicacion', 'desc')
         ->take(5)
         ->get();
+}
+
+
+// Landing
+Route::get('/', function () {
+    $publicaciones = verPublicaciones();
     return view('secciones.inicio', compact('publicaciones'));
 })->name('home');
 
 // Sección Nosotros
 Route::get('/nosotros', function () {
-    $publicaciones = Publicacion::where('activa', true)
-        ->orderBy('fecha_publicacion', 'desc')
-        ->take(5)
-        ->get();
+    $publicaciones = verPublicaciones();
     return view('secciones.nosotros', compact('publicaciones'));
 })->name('nosotros');
 
-// Sección Contacto
+// Seccion contacto
 Route::get('/contacto', function () {
-    $publicaciones = Publicacion::where('activa', true)
-        ->orderBy('fecha_publicacion', 'desc')
-        ->take(5)
-        ->get();
+    $publicaciones = verPublicaciones();
     return view('secciones.contacto', compact('publicaciones'));
 })->name('contacto');
 
 // Ruta POST para el formulario de contacto
 Route::post('/contacto', [ContactoController::class, 'store'])->name('contacto.enviar');
 
-// ==================== AUTENTICACIÓN ====================
 
 // Mostrar formulario de login
 Route::get('/login', function () {
-    return view('auth.login');
+    $publicaciones = verPublicaciones();
+    return view('auth.login', compact('publicaciones'));
 })->name('login')->middleware('guest');
 
 // Procesar login
@@ -56,6 +57,7 @@ Route::post('/login', function (Illuminate\Http\Request $request) {
         $request->session()->regenerate();
         return redirect()->intended('/publicaciones');
     }
+
 
     return back()->withErrors([
         'email' => 'Las credenciales no coinciden.',
@@ -68,12 +70,33 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
-// ==================== PANEL DE ADMINISTRACIÓN (PROTEGIDO) ====================
+// candado
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('publicaciones', PublicacionController::class)
         ->parameters(['publicaciones' => 'publicacion']);
 });
+
+
+
+Route::get('/nosotros', function () {
+    $publicaciones = verPublicaciones();
+    return view('secciones.nosotros', compact('publicaciones'));
+})->name('nosotros');
+
+Route::get('/sis-docente', function () {
+    $publicaciones = verPublicaciones();
+    return view('secciones.sis-docente', compact('publicaciones'));
+})->name('sis-docente');
+
+
+
+
+
+
+
+
+
 
 
 

@@ -143,6 +143,40 @@
             border-top: 3px solid #4c68b3;
         }
 
+        .btn-1 {
+            display: inline-block;
+            padding: 8px 16px ;
+            background-color: #4c68b3;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20PX;
+
+        }
+        .btn-2 {
+            display: inline-block;
+            padding: 8px 16px ;
+            background-color: #0e4d01;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20PX;
+
+        }
+        .btn-3 {
+            display: inline-block;
+            padding: 8px 16px ;
+            background-color: #a10303;
+            color: #fff;
+            border-radius: 8px;
+
+            font-weight: bold;
+
+
+        }
+
 
 
 

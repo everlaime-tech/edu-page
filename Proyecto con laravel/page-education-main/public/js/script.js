@@ -20,7 +20,7 @@ botonModo.addEventListener("click", alternarModo);
 //====================================================
 //validacion modificada para que permita
 
-const formularioPreinscripcion = document.querySelector("#form-preinscripcion");
+const formularioContacto= document.querySelector("#contacto");
 const aviso = document.querySelector("#error-mensaje");
 
 function revisarPreinscripcion (event) {
@@ -56,4 +56,4 @@ function revisarPreinscripcion (event) {
         aviso.classList.add("exito");
     }
 }
-formularioPreinscripcion.addEventListener("submit", revisarPreinscripcion);
+formularioContacto.addEventListener("submit", revisarPreinscripcion);

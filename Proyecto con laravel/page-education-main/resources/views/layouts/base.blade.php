@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('titulo', 'Colegio Luis Mario Careaga 2 Oruro')</title>
+    <title>@yield('titulo','Inicio ') Colegio Luis Mario Careaga 2 Oruro</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    @stack('styles')
+
 </head>
 
 <body>
 
-    {{-- HEADER --}}
     <header>
         <div class="logo">
             <img src="{{ asset('images/logo.jpg') }}" alt="Logo Unidad Educativa">
@@ -23,7 +22,7 @@
                 <li><a href="{{ route('contacto') }}">Contacto</a></li>
 
                 @auth
-                <li><a href="{{ route('publicaciones.index') }}" class="btn-1">Administrar publicaciones</a></li>
+                <li><a href="{{ route('publicaciones.index') }}">Administrador Publicaciones</a></li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" style="display:inline;">
                         @csrf
@@ -31,13 +30,14 @@
                     </form>
                 </li>
                 @else
-                <li><a href="{{ route('login') }}" class="btn-1">Administrar publicaciones</a></li>
+                <li><a href="{{ route('login') }}">Publicaciones</a></li>
                 @endauth
+                <li><a href="{{ route('sis-docente') }}">SIS-Docente</a></li>
             </ul>
         </nav>
     </header>
 
-    {{-- CONTENIDO PRINCIPAL + ASIDE (siempre visible) --}}
+
     <main>
         @yield('contenido')
     </main>
@@ -48,7 +48,7 @@
         </div>
 
         <h3 class="h3-publicaciones">Publicaciones</h3>
-        @if(isset($publicaciones) && $publicaciones->count())
+        @if(isset($publicaciones) )
         @foreach($publicaciones as $pub)
         <div class="publicacion-item">
             <h4>{{ $pub->titulo }}</h4>
@@ -60,12 +60,11 @@
             <hr>
         </div>
         @endforeach
-        @else
-        <p>No hay publicaciones aún.</p>
+
         @endif
     </aside>
 
-    {{-- FOOTER --}}
+
     <footer>
         <p>Integradora - Ever Socrates Laime Mamani - 18 de agosto de 2026</p>
         <p>&copy; 2026 Colegio Luis Mario Careaga 2 Oruro. Todos los derechos reservados.</p>
@@ -73,7 +72,7 @@
     </footer>
 
     <script src="{{ asset('js/script.js') }}"></script>
-    @stack('scripts')
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('titulo', 'Nosotros - Colegio Luis Mario Careaga 2 Oruro')
+@section('titulo', 'Nosotros')
 
 @section('contenido')
 <section id="nosotros">

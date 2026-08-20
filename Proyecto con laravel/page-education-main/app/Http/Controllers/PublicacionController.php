@@ -73,12 +73,17 @@ class PublicacionController extends Controller
         $request->validate([
             'titulo' => 'required|string|max:255',
             'contenido' => 'required|string',
-            'fecha_publicacion' => 'nullable|date',
             'imagen' => 'nullable|string',
             'activa' => 'boolean',
         ]);
 
-        $publicacion->update($request->all());
+        $data = [
+            'titulo' => $request->input('titulo'),
+            'contenido' => $request->input('contenido'),
+            'imagen' => $request->input('imagen'),
+        ];
+        $data['activa'] = $request->has('activa') ? 1 : 0;
+        $publicacion->update($data);
         return redirect()->route('publicaciones.index')->with('mensaje', 'Publicación actualizada.');
     }
 

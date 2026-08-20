@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('activa')->default(true);
             $table->timestamps();
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.

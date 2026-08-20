@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('titulo', 'Administrar Publicaciones')
+@section('titulo', 'Publicaciones')
 
 @section('contenido')
 <div class="panel-container">
@@ -11,16 +11,16 @@
     <div class="aviso exito">{{ session('mensaje') }}</div>
     @endif
 
-    @forelse($publicaciones as $pub)
+    @forelse($publicaciones as $publicacion)
     <div class="card">
-        <h4>{{ $pub->titulo }}</h4>
-        <p>{{ Str::limit($pub->contenido, 150) }}</p>
-        <small>Fecha: {{ $pub->fecha_publicacion ?? 'Sin fecha' }} | Activa: {{ $pub->activa ? 'Sí' : 'No' }}</small>
+        <h4>{{ $publicacion->titulo }}</h4>
+        <p>{{ Str::limit($publicacion->contenido, 300) }}</p>
+        <small>Fecha: {{ $pub->fecha_publicacion ?? 'Sin fecha' }} | Activa: {{ $publicacion->activa ? 'Sí' : 'No' }}</small>
         <div class="acciones">
-            <a href="{{ route('publicaciones.edit', $pub) }}" class="btn-2">Editar</a>
-            <form action="{{ route('publicaciones.destroy', $pub) }}" method="POST" style="display:inline;">
+            <a href="{{ route('publicaciones.edit', $publicacion) }}" class="btn-2">Editar</a>
+            <form action="{{ route('publicaciones.destroy', $publicacion) }}" method="POST" style="display:inline;">
                 @csrf @method('DELETE')
-                <button type="submit" class="btn-2" onclick="return confirm('¿Eliminar?')">Eliminar</button>
+                <button type="submit" class="btn-3" onclick="return confirm('¿Eliminar?')">Eliminar</button>
             </form>
         </div>
     </div>
